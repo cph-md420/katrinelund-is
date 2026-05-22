@@ -1,0 +1,331 @@
+<body>
+    <div class="flavor-wrapper">
+
+      <!-- JORDBÆR -->
+      <div class="flavor-card jordbaer active">
+
+      <!-- Wrapper billede -->
+      <img
+      src="/b84259f6-22dd-4c9b-af39-a803ac36dfb1.png"
+      class="floating-img"
+    >
+    <!-- Card content -->
+        <div class="side-title">Jordbær</div>
+        <div class="card-content">
+          <div class="text-area">
+            <h1>Jordbær</h1>
+            <p>
+              Cremet jordbærsorbet lavet på friske danske jordbær. En sikker
+              familiefavorit
+            </p>
+            <br>
+            <p>
+              <b>Ingredienser:</b> </p>
+            <p>
+              Vand, jordbær (30%), sukker, dextose, citron, stabilisator, fibre
+            </p>
+            <br>
+            <button class="custom-btn">FIND BUTIK</button>
+          </div>
+          <img
+            class="main-img"
+            src="/b84259f6-22dd-4c9b-af39-a803ac36dfb1.png"
+            alt="Jordbær sorbet"
+          />
+        </div>
+      </div>
+
+      <!-- HYLDEBLOMST -->
+      <div class="flavor-card hyldeblomst">
+
+      <!-- Wrapper billede -->
+      <img
+        src="/b84259f6-22dd-4c9b-af39-a803ac36dfb1.png"
+        class="floating-img"
+      >
+
+    <!-- Card content -->
+        <div class="side-title">Hyldeblomst</div>
+        <div class="card-content">
+          <div class="text-area">
+            <h1>Hyldeblomst</h1>
+            <p>
+              Forfriskende hyldeblomstsorbet med en blomstrende smag af sommer. Lavet på danske hyldeblomster
+            </p>
+            <br>
+            <p>
+              Vand, hyldeblomst (25 %), sukker, dextose, citron, E330, stabilisator, fibre
+            </p>
+            <br>
+            <button class="custom-btn">FIND BUTIK</button>
+          </div>
+          <img
+            class="main-img"
+            src="/b84259f6-22dd-4c9b-af39-a803ac36dfb1.png"
+            alt="Hyldeblomst sorbet"
+          />
+        </div>
+      </div>
+
+      <!-- SKOVBÆR -->
+      
+      <div class="flavor-card skovbaer">
+          <!---->
+          
+
+<div class="marquee floating-text">
+    <div class="marquee__group">
+      <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+      
+    </div>
+    <div class="marquee__group">
+      <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+      
+    </div>
+    <div class="marquee__group">
+      <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+      
+    </div>
+    <div class="marquee__group">
+      <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+      
+    </div>
+  <div class="marquee__group" aria-hidden="true">
+      <span>Nyhed</span>
+       <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+     <span>Nyhed</span>
+      <span>-</span>
+      
+    </div>
+</div>
+
+
+
+          
+        <div class="side-title">Solbær
+        </div>
+        <!-- Wrapper billede -->
+      <img
+        src="/b84259f6-22dd-4c9b-af39-a803ac36dfb1.png"
+        class="floating-img"
+      >
+        <div class="card-content">
+          <div class="text-area">
+            <h1>Solbær</h1>
+            <p>
+              Let, syrlig solbærsorbet fyldt med danske solbær. Vores nyeste issmag
+            </p>
+            <br>
+            <p>
+              <b>Ingredienser:</b> </p>
+              <p>Vand, solbær (30%), sukker, dextose, citron, stabilisator, fibre.
+            </p>
+            <br>
+            <button class="custom-btn">FIND BUTIK</button>
+          </div>
+          <img
+            class="main-img"
+            src="/b84259f6-22dd-4c9b-af39-a803ac36dfb1.png"
+            alt="Skovbær sorbet"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+      *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    /*body{*/
+    /*  overflow:hidden;*/
+    /*}*/
+
+    /* Main wrapper */
+    .flavor-wrapper{
+      display:flex;
+      height:100vh;
+      overflow: hidden;
+    }
+
+    /* Wrapper billede */
+    .floating-img{
+      position:absolute;
+      bottom:40px;
+      left:50%;
+      transform:translateX(-50%);
+      width:120px;
+      z-index:5;
+      transition:all .7s cubic-bezier(.77,0,.18,1);
+}
+/*Sliding text*/
+.floating-text{
+      position:absolute;
+      top:0vh;
+      min-width:100%;
+      z-index:10;
+      transition:all .7s cubic-bezier(.77,0,.18,1);
+      margin:0;
+}
+
+    /* Cards */
+    .flavor-card{
+      position:relative;
+      overflow:hidden;
+      flex:1;
+      transition:all .7s ease;
+      cursor:pointer;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* Active card */
+    .flavor-card.active{
+      flex:4;
+    }
+
+    /* Active image */
+    .main-img{
+      position:absolute;
+      right:10%;
+      top:50%;
+      transform:translateY(-50%) scale(.7);
+      width:320px;
+      opacity:0;
+      transition:all .7s cubic-bezier(.77,0,.18,1);
+      z-index:2;
+    }
+
+    /* Active state */
+    .flavor-card.active .main-img{
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    .flavor-card.active .floating-img{
+      opacity: 0;
+      transform: 
+        translateX(-50%)
+        translateY(100px)
+        scale(.4);
+    }
+
+    /* Colours */
+    .jordbaer{
+      background:#EC919E;
+    }
+
+    .hyldeblomst{
+      background:#bdd48d;
+    }
+
+    .skovbaer{
+      background:#C685CA;
+    }
+
+    /* Content */
+    .card-content{
+      width:100%;
+      height:100%;
+      padding:80px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      opacity:0;
+      transition:opacity .4s ease;
+    }
+
+    .flavor-card.active .card-content{
+      opacity:1;
+    }
+
+    /* Wrappers */
+    .side-title{
+      writing-mode:vertical-rl;
+      font-size:4rem;
+      font-weight:900;
+      color:#000;
+      transform:
+        translateX(-50%)
+        rotate(180deg);
+      position: absolute;
+      top: 15vh;
+      left: 50%;
+    }
+
+    /* Hide wrapper when active */
+    .flavor-card.active .side-title{
+      opacity: 0;
+    }
+
+    /* Left content */
+    .text-area{
+      max-width:400px;
+    }
+
+    .text-area h1{
+      font-size:4rem;
+      font-weight:900;
+      margin-bottom:40px;
+    }
+
+    .text-area p{
+      font-size:1.1rem;
+      line-height:1.5;
+      margin-bottom:40px;
+    }
+
+    /* Button */
+    .custom-btn{
+      border:none;
+      padding:20px 40px;
+      border-radius:35px;
+      background:#3a3a3a;
+      color:white;
+      font-weight:700;
+      font-size:1.1rem;
+    }
+    .active{
+	cursor: default;
+}
+  </style>
+  <script>
+      const cards = document.querySelectorAll(".flavor-card");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          cards.forEach((c) => {
+            c.classList.remove("active");
+          });
+
+          card.classList.add("active");
+        });
+      });
+  </script>
