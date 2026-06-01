@@ -107,8 +107,171 @@ h3{
 	border: 2px solid #7D944A !important;
 	border-top: none !important;
 }
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    /* MAIN WRAPPER */
+    .flavor-wrapper{
+      display:flex;
+      height:95vh;
+    }
+
+    /* WRAPPER IMG */
+    .floating-img{
+      position:absolute;
+      bottom:40px;
+      left:50%;
+      transform:translateX(-50%);
+      width:120px;
+      z-index:5;
+      transition:all .7s cubic-bezier(.77,0,.18,1);
+    }
+
+    /* SLIDING TEXT */
+    .floating-text{
+      position:absolute;
+      top:0vh;
+      min-width:100%;
+      z-index:10;
+      transition:all .7s cubic-bezier(.77,0,.18,1);
+      margin:0;
+    }
+
+    /* CARDS */
+    .flavor-card{
+      position:relative;
+      overflow:hidden;
+      flex:1;
+      transition:all .7s ease;
+      cursor:pointer;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* ACTIVE CARD */
+    .flavor-card.active{
+      flex:4;
+    }
+
+    /* ACTIVE CARD ICON */
+    .icon-row{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    .icon{
+      width: 20%;
+    }
+
+    /* ACTIVE IMG */
+    .main-img{
+      position:absolute;
+      right:10%;
+      top:50%;
+      transform:translateY(-50%) scale(.7);
+      width:320px;
+      opacity:0;
+      transition:all .7s cubic-bezier(.77,0,.18,1);
+      z-index:2;
+    }
+
+    /* ACTIVE STATE */
+    .flavor-card.active .main-img{
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    .flavor-card.active .floating-img{
+      opacity: 0;
+      transform: 
+        translateX(-50%)
+        translateY(100px)
+        scale(.4);
+    }
+
+    /* COLOURS */
+    .jordbaer{
+      background:#cd8080;
+    }
+
+    .hyldeblomst{
+      background:#bdd48d;
+    }
+
+    .solbaer{
+      background:#b9719d;
+    }
+
+    /* CONTENT */
+    .card-content{
+      width:100%;
+      height:100%;
+      padding:80px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      opacity:0;
+      transition:opacity .4s ease;
+    }
+
+    .flavor-card.active .card-content{
+      opacity:1;
+    }
+
+    /* WRAPPERS */
+    .side-title{
+      writing-mode:vertical-rl;
+      font-size:4rem;
+      font-weight:900;
+      color:#000;
+      transform:
+        translateX(-50%)
+        rotate(180deg);
+      position: absolute;
+      top: 150px;
+      left: 50%;
+    }
+
+    /* HIDE WRAPPER WHEN ACTIVE */
+    .flavor-card.active .side-title{
+      opacity: 0;
+    }
+
+    /* LEFT CONTENT */
+    .text-area{
+      max-width:400px;
+    }
+
+    .text-area h1{
+      font-size:4rem;
+      font-weight:900;
+      margin-bottom:40px;
+    }
+
+    .text-area p{
+      font-size:1.1rem;
+      line-height:1.5;
+      margin-bottom:40px;
+    }
+
+    /* BUTTON */
+    .custom-btn{
+      border:none;
+      padding:18px 40px;
+      border-radius:50px;
+      background:#3a3a3a;
+      color:white;
+      font-weight:700;
+      font-size:1.1rem;
+    }
 /* Sliding text i solbær-smag-sektion */
-.marquee {
+    .marquee {
 	display: flex;
 	overflow: hidden;
 	user-select: none;
@@ -133,6 +296,14 @@ h3{
 	font-weight: 800;
 	white-space: nowrap;
 	font-family: 'quicksand', sans-serif !important;
+}
+@keyframes scroll {
+	from {
+    	transform: translateX(0);
+  	}
+  	to {
+    	transform: translateX(calc(-100% - .6rem));
+  	}
 }
 @keyframes scroll {
 	from {
